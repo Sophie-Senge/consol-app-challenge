@@ -1,4 +1,7 @@
-var finances = [
+let totalProfit = 0;
+let totalMonths = 85;
+
+let finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,3 +89,17 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+for (let i = 0; i < finances.length; i++) {
+  const [date, amount ] = finances[i];
+  console.log(date);
+  console.log(amount);
+}
+
+for (let i = 0; i < totalMonths; i++) {
+  const finance = finances[i];
+  
+}
+
+console.log(finances.length)
+
