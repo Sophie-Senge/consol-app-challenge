@@ -115,7 +115,7 @@ console.log("Net total profit: " + totalProfit)
   // You will need to track what the total change in profits are from month to month and then find the average.
   // (Total/Number of months)
   //.toFixed for decimal place
-  
+
   let totalChange = 0;
 
   for (let i = 1; i < finances.length; i++) {
@@ -124,9 +124,8 @@ console.log("Net total profit: " + totalProfit)
   }
   
   let averageChange = totalChange / (totalMonths - 1);
-  averageChange = averageChange;
 
-  console.log("Average profit/losses change: " + averageChange.toFixed(2))
+  console.log("Average profit/losses: " + averageChange.toFixed(2))
 
 //The greatest increase in profits (date and amount) over the entire period
 
@@ -155,16 +154,5 @@ console.log("Net total profit: " + totalProfit)
 
 // Sample decrementing for loop
 //for (let i = arr.length - 1; i > 0; i--) {}
-
-
-
-for (let i = 0; i < finances.length; i++) {
-  const [date, amount ] = finances[i];
-  console.log(date);
-  console.log(amount);
- 
-}
-
-
 
 
