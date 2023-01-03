@@ -23,3 +23,4 @@ The greatest decrease in losses (date and amount) over the entire period.
 This was incredibly challenging. Mostly, the logic surrounding word based mathmatical problems and translating that into JS code was particularly challenging.
 
 # live link
+https://sophie-senge.github.io/consol-app-challenge/
