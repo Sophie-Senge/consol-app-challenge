@@ -91,7 +91,7 @@ let finances = [
 ];
 
 
-//total number of months in data set
+//total number of months in data set with variable to store data
 let totalMonths = finances.length;
 console.log("Total number of months: " + totalMonths)
 
@@ -112,48 +112,27 @@ console.log("Net total profit: " + totalProfit)
 
 
 // The average of the changes in Profit/Losses over the entire period.
-// You will need to track what the total change in profits are from month to month and then find the average.
-// (Total/Number of months)
+  // You will need to track what the total change in profits are from month to month and then find the average.
+  // (Total/Number of months)
+  //.toFixed for decimal place
+  
+  let totalChange = 0;
+
+  for (let i = 1; i < finances.length; i++) {
+      totalChange += finances[i][1] - finances[i - 1][1];
+      
+  }
+  
+  let averageChange = totalChange / (totalMonths - 1);
+  averageChange = averageChange;
+
+  console.log("Average profit/losses change: " + averageChange.toFixed(2))
 
 //The greatest increase in profits (date and amount) over the entire period
 
 //The greatest decrease in losses (date and amount) over the entire period
 
-
-for (let i = 0; i < finances.length; i++) {
-  const [date, amount ] = finances[i];
-  console.log(date);
-  console.log(amount);
-
-  
- 
-}
-
-
-
-// Your task is to write JavaScript code that analyzes the records to calculate each of the following:
-
-// The total number of months included in the dataset.
-  // Count up how many things are in the array
-  // array.length
-  // Need a variable to store the value of array.length
-
-// The net total amount of Profit / Losses over the entire period.
-  // Adding up the money
-  // Keep a rolling total
-  // Need a variable to store the rolling total
-  // for loop to iterate over the array
-    // Inside that for loop, access position 1 of each array element to get the numbers
-
-// The average of the changes in Profit / Losses over the entire period.
-// You will need to track what the total change in profits are from month to month and then find the average.
-// (Total / Number of months)
-
-// The greatest increase in profits(date and amount) over the entire period.
-
-// The greatest decrease in losses(date and amount) over the entire period.
-
-  // Total up the differences between each pair of adjoining months & divide by number of array elements
+ // Total up the differences between each pair of adjoining months & divide by number of array elements
   // for loop starting with i = 1
     // Each iteration, subtract the data at position [1] of the previous element from the data at position [1] of the current element
     // Put that data into a new array variable
@@ -176,5 +155,16 @@ for (let i = 0; i < finances.length; i++) {
 
 // Sample decrementing for loop
 //for (let i = arr.length - 1; i > 0; i--) {}
+
+
+
+for (let i = 0; i < finances.length; i++) {
+  const [date, amount ] = finances[i];
+  console.log(date);
+  console.log(amount);
+ 
+}
+
+
 
 
